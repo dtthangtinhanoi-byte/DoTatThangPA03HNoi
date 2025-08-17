@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>B? s?u t?p PDF</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: #2c3e50;
+      color: #fff;
+      padding: 10px 20px;
+    }
+    nav {
+      background: #ecf0f1;
+      padding: 10px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    nav button {
+      padding: 8px 12px;
+      border: none;
+      background: #3498db;
+      color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    nav button:hover {
+      background: #2980b9;
+    }
+    iframe {
+      flex: 1;
+      width: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>B? s?u t?p PDF</h1>
+  </header>
+
+  <nav>
+    <button onclick="showPDF('file1.pdf')">file1</button>
+    <button onclick="showPDF('file2.pdf')">file2</button>
+    <button onclick="showPDF('file3.pdf')">file3</button>
+    <button onclick="showPDF('file4.pdf')">file4</button>
+    <button onclick="showPDF('file5.pdf')">file5</button>
+    <button onclick="showPDF('file6.pdf')">file6</button>
+  </nav>
+
+  <iframe id="pdfFrame" src="file1.pdf"></iframe>
+
+  <script>
+    function showPDF(filename) {
+      document.getElementById('pdfFrame').src = filename;
+    }
+  </script>
+</body>
+</html>
